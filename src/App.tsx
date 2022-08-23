@@ -1,15 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {AxiosGet, AxiosPost} from "./api/request";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,6 +12,11 @@ function App() {
         >
           Learn React
         </a>
+        <hr/>
+        <button onClick={() => AxiosGet('posts')}>Get按钮</button>
+        <button onClick={() => AxiosGet('posts', {id: 1})}>Get按钮</button>
+
+        <button onClick={() => AxiosPost('posts', {id: 1})}>Post按钮</button>
       </header>
     </div>
   );
