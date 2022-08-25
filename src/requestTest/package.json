@@ -1,0 +1,7 @@
+{
+  "name": "@react-demo/requestTest",
+  "version": "1.0.0",
+  "dependencies": {
+    "@react-demo/request": "*"
+  }
+}
